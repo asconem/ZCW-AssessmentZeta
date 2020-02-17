@@ -11,7 +11,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+         String[] newArr = sentence.split(" ");
+         return newArr;
     }
 
 
@@ -21,7 +22,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String str = sentence.substring(0, sentence.indexOf(' '));
+        return str;
     }
 
     /**
@@ -30,7 +32,9 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+
+        String str = getFirstWord(sentence);
+        return new StringBuilder(str).reverse().toString();
     }
 
     /**
@@ -39,7 +43,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+        String str = reverseFirstWord(sentence);
+        return str.substring(0,1).toUpperCase() + str.substring(1);
     }
 
 
