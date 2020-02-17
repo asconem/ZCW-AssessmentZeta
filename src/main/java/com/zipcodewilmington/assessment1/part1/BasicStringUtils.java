@@ -39,7 +39,8 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+
+        return str.substring(1, str.length()-1);
     }
 
     /**
@@ -47,6 +48,16 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        return null;
+
+        char[] arr = str.toCharArray();
+        for (int i = 0; i < arr.length; i++) {
+            char c = arr[i];
+            if (Character.isUpperCase(c)) {
+                arr[i] = Character.toLowerCase(c);
+            } else if (Character.isLowerCase(c)){
+                arr[i] = Character.toUpperCase(c);
+            }
+        }
+        return new String(arr);
     }
 }
