@@ -49,7 +49,21 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
+        int element = 0;
+        int count = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            int tempElement = (int) objectArray[i];
+            int tempCount = 0;
+            for (int j = 0; j < objectArray.length; j++) {
+                if (objectArray[j].equals(tempElement)) {
+                    tempCount++;
+                }
+            }if (tempCount > count) {
+                element = tempElement;
+                count = tempCount;
+            }
+        }
+        return element;
     }
 
 
@@ -59,7 +73,21 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
-        return null;
+        int element = 0;
+        int count = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            int tempElement = (int) objectArray[i];
+            int tempCount = 0;
+            for (int j = 0; j < objectArray.length; j++) {
+                if (!(objectArray[j].equals(tempElement))) {
+                    tempCount++;
+                }
+            }if (tempCount > count) {
+                element = tempElement;
+                count = tempCount;
+            }
+        }
+        return element;
     }
 
     /**
