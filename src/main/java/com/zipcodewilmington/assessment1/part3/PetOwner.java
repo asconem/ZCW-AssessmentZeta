@@ -12,12 +12,16 @@ public class PetOwner {
      */
 
     public PetOwner(String name, Pet... pets) {
+        name = "George";
+        ArrayList<Dog> list = new ArrayList<>();
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        Pet newDog = new Dog();
+
     }
 
     /**
